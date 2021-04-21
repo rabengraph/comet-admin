@@ -24,6 +24,7 @@ All notable changes to this project will be documented in this file. This projec
 -   add onAfterSubmit to FinalForm
 -   add useStoredState() hook
 -   Added a new FinalFormRangeInput Component
+-   add SnackbarProvider and associated hooks useSnackbarApi() and useUndoSnackbar()
 
 ### Incompatible Changes
 
