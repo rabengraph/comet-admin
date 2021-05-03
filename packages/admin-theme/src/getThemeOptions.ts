@@ -16,6 +16,7 @@ import cometAdminMenuOverrides from "./cometAdminOverrides/menu";
 import cometAdminMenuCollapsibleItemOverrides from "./cometAdminOverrides/menuCollapsibleItem";
 import cometAdminMenuItemOverrides from "./cometAdminOverrides/menuItem";
 import { cometAdminToolbarOverrides } from "./cometAdminOverrides/toolbar";
+import { cometAdminToolbarBackButtonOverrides } from "./cometAdminOverrides/toolbarbackbutton";
 import { cometAdminToolbarItemOverrides } from "./cometAdminOverrides/toolbaritem";
 import { cometAdminBreadcrumbsProps } from "./cometAdminProps/breadcrumbs";
 import cometAdminErrorBoundaryProps from "./cometAdminProps/errorBoundary";
@@ -23,6 +24,7 @@ import cometAdminMasterLayoutProps from "./cometAdminProps/masterLayout";
 import cometAdminMenuProps from "./cometAdminProps/menu";
 import cometAdminMenuCollapsibleItemProps from "./cometAdminProps/menuCollapsibleItem";
 import { cometAdminToolbarProps } from "./cometAdminProps/toolbar";
+import { cometAdminToolbarBackButtonProps } from "./cometAdminProps/toolbarBackButton";
 import cometAdminRteBlockTypeControlsOverrides from "./cometAdminRteOverrides/blockTypeControls";
 import cometAdminRteControlButtonOverrides from "./cometAdminRteOverrides/controlButton";
 import cometAdminRteFeaturesButtonGroupOverrides from "./cometAdminRteOverrides/featuresButtonGroup";
@@ -52,6 +54,7 @@ export default (): ThemeOptions => ({
         CometAdminBreadcrumbs: cometAdminBreadcrumbsProps(),
         ...getMuiProps(),
         CometAdminToolbar: cometAdminToolbarProps(),
+        CometAdminToolbarBackButton: cometAdminToolbarBackButtonProps(),
         MuiAppBar: {
             elevation: 0,
         },
@@ -65,6 +68,7 @@ export default (): ThemeOptions => ({
         CometAdminMainContent: cometAdminMainContentOverrides(),
         CometAdminMasterLayout: cometAdminMasterLayoutOverrides(),
         CometAdminToolbar: cometAdminToolbarOverrides(),
+        CometAdminToolbarBackButton: cometAdminToolbarBackButtonOverrides(),
         CometAdminToolbarItem: cometAdminToolbarItemOverrides(),
         CometAdminInputBase: cometAdminInputBaseOverrides(),
 
