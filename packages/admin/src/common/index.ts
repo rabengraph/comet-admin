@@ -1,1 +1,1 @@
-export * from "./ClearInputButton";
+export * from "./buttons";

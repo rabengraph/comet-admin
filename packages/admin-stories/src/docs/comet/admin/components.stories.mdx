@@ -1,0 +1,120 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+
+# Components
+
+<Meta title="Docs/@comet/admin/components" />
+
+## Split Button
+
+import { SplitButton } from "@comet/admin";
+import { Button } from "@material-ui/core";
+
+<Canvas style={{ height: 250 }}>
+    <Story name="SplitButton - one button">
+        <SplitButton>
+            <Button
+                onClick={() => {
+                    alert("primary clicked");
+                }}
+            >
+                Primary Action
+            </Button>
+        </SplitButton>
+    </Story>
+    <Story name="SplitButton - one button with select">
+        <SplitButton showSelectButton={true}>
+            <Button
+                onClick={() => {
+                    alert("primary clicked");
+                }}
+            >
+                Primary Action
+            </Button>
+        </SplitButton>
+    </Story>
+    <Story name="SplitButton - disabled">
+        <SplitButton disabled={true}>
+            <Button
+                onClick={() => {
+                    alert("primary clicked");
+                }}
+            >
+                Primary Action
+            </Button>
+        </SplitButton>
+    </Story>
+</Canvas>
+
+export const SplitButtonControlled = ({ children, ...restProps }) => {
+    const [selectedIndex, setSelectedIndex] = React.useState(0);
+    return (
+        <SplitButton {...restProps} selectedIndex={selectedIndex} onSelectIndex={(index) => setSelectedIndex(index)}>
+            {children}
+        </SplitButton>
+    );
+};
+
+<Canvas style={{ height: 250 }}>
+    <Story name="SplitButton">
+        <div>
+            <SplitButtonControlled variant={"contained"}>
+                <Button
+                    color={"primary"}
+                    onClick={() => {
+                        alert("primary clicked");
+                    }}
+                >
+                    Primary Action
+                </Button>
+                <Button
+                    color={"secondary"}
+                    onClick={() => {
+                        alert("secondary clicked");
+                    }}
+                >
+                    Secondary Action
+                </Button>
+            </SplitButtonControlled>
+        </div>
+    </Story>
+</Canvas>
+
+<Canvas style={{ height: 250 }}>
+    <Story name="SplitButton - Color Change">
+        <div>
+            <SplitButton selectedIndex={0}>
+                <Button variant={"contained"} color={"primary"}>
+                    Primary Action
+                </Button>
+                <Button variant={"contained"} color={"primary"}>
+                    Secondary Action
+                </Button>
+                <Button variant={"contained"} color={"secondary"}>
+                    Tertiary Action
+                </Button>
+            </SplitButton>
+        </div>
+    </Story>
+</Canvas>
+
+import { Error } from "@comet/admin-icons";
+
+<Canvas style={{ height: 250 }}>
+    <Story name="SplitButton - Custom Component">
+        <div>
+            <SplitButton>
+                <Button variant={"contained"} color={"primary"}>
+                    Primary Action
+                </Button>
+                <div
+                    style={{ cursor: "pointer" }}
+                    onClick={() => {
+                        alert("Pressed");
+                    }}
+                >
+                    <Error /> Error
+                </div>
+            </SplitButton>
+        </div>
+    </Story>
+</Canvas>
