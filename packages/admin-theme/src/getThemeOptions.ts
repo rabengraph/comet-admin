@@ -27,6 +27,8 @@ import cometAdminMenuProps from "./cometAdminProps/menu";
 import cometAdminMenuCollapsibleItemProps from "./cometAdminProps/menuCollapsibleItem";
 import { cometAdminToolbarProps } from "./cometAdminProps/toolbar";
 import { cometAdminToolbarBackButtonProps } from "./cometAdminProps/toolbarBackButton";
+import { cometAdminToolbarBreadcrumbsProps } from "./cometAdminProps/toolbarBreadcrumbs";
+import { cometAdminToolbarTitleItemProps } from "./cometAdminProps/toolbarTitleItem";
 import cometAdminRteBlockTypeControlsOverrides from "./cometAdminRteOverrides/blockTypeControls";
 import cometAdminRteControlButtonOverrides from "./cometAdminRteOverrides/controlButton";
 import cometAdminRteFeaturesButtonGroupOverrides from "./cometAdminRteOverrides/featuresButtonGroup";
@@ -57,6 +59,8 @@ export default (): ThemeOptions => ({
         ...getMuiProps(),
         CometAdminToolbar: cometAdminToolbarProps(),
         CometAdminToolbarBackButton: cometAdminToolbarBackButtonProps(),
+        CometAdminToolbarTitleItem: cometAdminToolbarTitleItemProps(),
+        CometAdminToolbarBreadcrumbs: cometAdminToolbarBreadcrumbsProps(),
         MuiAppBar: {
             elevation: 0,
         },
