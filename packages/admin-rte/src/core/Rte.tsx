@@ -263,6 +263,7 @@ const Rte: React.RefForwardingComponent<any, IProps> = (props, ref) => {
         <div ref={editorWrapperRef} className={rootClasses.join(" ")}>
             <Controls editorRef={editorRef} editorState={editorState} setEditorState={onChange} options={options} disabled={disabled} />
             <div className={classes.editor}>
+                <h1>My Demo PR</h1>
                 <DraftJsEditor
                     ref={editorRef}
                     editorState={editorState}
